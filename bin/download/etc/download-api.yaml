@@ -1,0 +1,9 @@
+Name: download-api
+Host: 0.0.0.0
+Port: 1006
+
+
+DownloadPath: "E:/Gopath/src/logic-server/data/xiaozhi_data"
+
+
+WavIsDelete: false

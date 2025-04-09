@@ -1,0 +1,27 @@
+Name: websocket
+Host: 127.0.0.1
+Port: 6099
+MaxBytes: 1048576000
+Timeout: 30000
+
+Log:
+  ServiceName: websocket
+  Level: info
+
+SpeechRpc:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:30000
+    Key: speech.rpc
+  Timeout: 50000
+
+
+
+TaskMaxLimit: 1000 # 最大任务数  限流器
+
+TimeLimit: 10 #限流器任务速率
+
+
+DifyHost: "http://localhost/v1"
+
+DifyApiSecretKey: "app-wu7gxSfpusiMLB3MhVbder6T"

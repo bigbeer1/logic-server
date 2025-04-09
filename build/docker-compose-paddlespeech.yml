@@ -1,0 +1,24 @@
+version: '3'
+
+
+services:
+  paddlespeech:
+    image: python:3.8
+    container_name: paddlespeech
+    working_dir: /data
+    ports:
+      - "5009:5009"
+    volumes:
+      - ../deploy/speech:/data
+      - ../deploy/speech/root:/root
+      - ../deploy/time/Shanghai:/etc/localtime
+      - ../deploy/time/Shanghai:/usr/share/zoneinfo/Asia/Shanghai
+      - ../data/xiaozhi_data/wav:/wav                           # 上传下载目录文件
+    privileged: true
+    deploy:
+      resources:
+        limits:
+          memory: 4096M # 限制最大使用内存
+    restart: always
+    command: "python main.py"
+    #tty: true

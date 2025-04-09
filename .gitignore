@@ -1,0 +1,16 @@
+/deploy/golang/manage/out/
+/deploy/golang/twy/out/
+/bin/*/*.exe
+/bin/*/*/*.exe
+/bin/*/*/*/*.exe
+/bin/*/*/*/*/*.exe
+/data/*
+.idea/*
+/deploy/m7s/.m7s
+/deploy/m7s/logs
+/deploy/m7s/resource
+/deploy/m7s/shutdown.sh
+/deploy/speech/*
+/deploy/speech
+/test/*.exe
+/test/*/*.exe

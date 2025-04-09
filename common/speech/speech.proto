@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package speech;
+
+option go_package = "./speechclient";
+
+message PaddleSpeechReq {
+    string text = 1;      // 文本内容
+}
+
+message PaddleSpeechReply {
+    string address = 1;  //音频保存地址
+}
+
+
+// PaddleSpecechReq：request，PaddleSpeechReply：response
+service  speech{
+    rpc PaddleSpeech(PaddleSpeechReq) returns (PaddleSpeechReply){}
+}

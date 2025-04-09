@@ -1,0 +1,26 @@
+type (
+	Request {
+		FileType string `path:"file_type"`
+		File     string `path:"file"`
+	}
+	RequestWav {
+		File string `path:"file"`
+	}
+	Response {
+		Code int         `json:"code"`
+		Msg  string      `json:"msg"`
+		Data interface{} `json:"data"`
+	}
+	ResponseByte {
+		Data []byte `json:"data"`
+	}
+)
+
+service download-api {
+	@handler DownloadPublicHandler
+	get /pubilc/:FileType/:File (Request) returns (ResponseByte)
+
+	@handler DownloadWav
+	get /wav/:File (RequestWav) returns (ResponseByte)
+}
+
